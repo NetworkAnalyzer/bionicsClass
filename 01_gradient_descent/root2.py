@@ -13,7 +13,6 @@ def main():
     print('Init\t:' + str(x))
     print('lr\t:' + str(LEARNING_RATE))
     print('--------------------------')
-    x_history = [x]
 
     for i in range(0, ITERATION_LIMIT):
         x_new = x - LEARNING_RATE * function_prime(x)
@@ -26,7 +25,6 @@ def main():
             break
 
         x = x_new
-        x_history.append(x_new)
     
 if __name__ == "__main__":
     main()
