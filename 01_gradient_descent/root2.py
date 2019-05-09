@@ -17,14 +17,11 @@ def main():
         print(x_new)
 
         error = abs(x - x_new)
-        print('error:', error)
         if error < END_CONDITION:
             break
 
         x = x_new
         x_history.append(x_new)
     
-    print(x_history)
-
 if __name__ == "__main__":
     main()
