@@ -10,11 +10,16 @@ def function_prime(x):
 def main():
     
     x = INIT_VAL
+    print('Init\t:' + str(x))
+    print('lr\t:' + str(LEARNING_RATE))
+    print('--------------------------')
     x_history = [x]
 
     for i in range(0, ITERATION_LIMIT):
         x_new = x - LEARNING_RATE * function_prime(x)
-        print(x_new)
+
+        if (i%100 == 0):
+            print(str(i) + '\t:' + str(x_new))
 
         error = abs(x - x_new)
         if error < END_CONDITION:
