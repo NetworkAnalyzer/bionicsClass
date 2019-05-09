@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-INIT_VAL = 2
-LEARNING_RATE = 0.01
-ITERATION = 1000
-END_CONDITION = 0.00001
+INIT_VAL = 1.5
+LEARNING_RATE = 0.3
+ITERATION_LIMIT = 10000
+END_CONDITION = 0.0000001
 
 def function_prime(x):
     return (x**2 - 2)**2
@@ -12,7 +12,7 @@ def main():
     x = INIT_VAL
     x_history = [x]
 
-    for _ in range(0, ITERATION):
+    for i in range(0, ITERATION_LIMIT):
         x_new = x - LEARNING_RATE * function_prime(x)
         print(x_new)
 
