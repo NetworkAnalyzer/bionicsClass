@@ -1,16 +1,19 @@
 # -*- coding: utf-8 -*-
+INIT_VAL = 2
+LEARNING_RATE = 0.01
+ITERATION = 1000
 END_CONDITION = 0.00001
 
 def function_prime(x):
     return 2 * x
 
-def main(x_init, learning_rate):
+def main():
     
-    x = x_init
+    x = INIT_VAL
     x_history = [x]
 
-    for _ in range(0, 100):
-        x_new = x - learning_rate * function_prime(x)
+    for _ in range(0, ITERATION):
+        x_new = x - LEARNING_RATE * function_prime(x)
         print(x_new)
 
         error = abs(x - x_new)
@@ -24,4 +27,4 @@ def main(x_init, learning_rate):
     print(x_history)
 
 if __name__ == "__main__":
-    main(1, 0.01)
+    main()
