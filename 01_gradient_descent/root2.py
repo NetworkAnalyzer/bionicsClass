@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 END_CONDITION = 0.00001
 
-def function(x):
-    return x**2 - 2
-
 def function_prime(x):
     return 2 * x
 
