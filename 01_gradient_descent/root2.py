@@ -5,7 +5,7 @@ ITERATION = 1000
 END_CONDITION = 0.00001
 
 def function_prime(x):
-    return 2 * x
+    return (x**2 - 2)**2
 
 def main():
     
