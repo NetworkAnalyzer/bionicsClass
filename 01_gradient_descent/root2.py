@@ -4,9 +4,6 @@ END_CONDITION = 0.00001
 def function_prime(x):
     return 2 * x
 
-def should_exit(e):
-    return 
-
 def main(x_init, learning_rate):
     
     x = x_init
