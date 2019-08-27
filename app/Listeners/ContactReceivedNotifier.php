@@ -5,6 +5,7 @@ namespace App\Listeners;
 use App\Events\ContactReceived;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use App\Notifications\ContactReceived as ContactReceivedNotification;
 
 class ContactReceivedNotifier
 {
@@ -26,6 +27,7 @@ class ContactReceivedNotifier
      */
     public function handle(ContactReceived $event)
     {
-        //
+        $contact = $event->contact;
+        $contact->notify(new ContactReceivedNotification($contact));
     }
 }
