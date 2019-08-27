@@ -6,19 +6,22 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use App\Contact;
 
 class ContactReceived extends Notification
 {
     use Queueable;
+
+    private $contact;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Contact $contact)
     {
-        //
+        $this->contact = $contact;
     }
 
     /**
@@ -41,9 +44,15 @@ class ContactReceived extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+            ->subject('お問い合わせ受付完了のお知らせ')
+            ->greeting("以下の内容でお問い合わせを受け付けました。")
+            ->line("───────────────────────────────")
+            ->line("氏名：{$this->contact->name}")
+            ->line("メールアドレス：{$this->contact->email}")
+            ->line("内容：{$this->contact->message}")
+            ->line("───────────────────────────────")
+            ->line("このメールはシステムにより、自動返信されています。")
+            ->line("このメールアドレスは送信専用です。返信はお控えください。");
     }
 
     /**
