@@ -64,9 +64,11 @@
 
             @include('layouts.nav')
 
-            @include('layouts.header')
-
-            @yield('content')
+			@if(url()->current() === route('home.index'))
+            	@include('layouts.header')
+			@endif
+			
+			@yield('content')
 			
 			@include('layouts.hiring')
 
