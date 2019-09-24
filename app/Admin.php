@@ -16,4 +16,9 @@ class Admin extends Authenticatable
     {
         return config('mail.admin');
     }
+
+    public function contacts()
+    {
+        return $this->morphMany(Contact::class, 'contactable');
+    }
 }

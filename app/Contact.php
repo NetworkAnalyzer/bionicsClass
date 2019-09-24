@@ -10,4 +10,9 @@ class Contact extends Model
     use Notifiable;
     
     protected $fillable = ['name', 'email', 'message'];
+
+    public function contactable()
+    {
+        return $this->morphTo();
+    }
 }
