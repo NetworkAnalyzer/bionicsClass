@@ -4,8 +4,46 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "398ca4cfb8dcb96dc3a81a806e3567de",
+    "content-hash": "253b7167a13d88ece59af26e7ff7595c",
     "packages": [
+        {
+            "name": "calebporzio/bear-sync",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/calebporzio/bear-sync.git",
+                "reference": "3066908c499ccfd542cbb1338ed02cdb5f6d5381"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/calebporzio/bear-sync/zipball/3066908c499ccfd542cbb1338ed02cdb5f6d5381",
+                "reference": "3066908c499ccfd542cbb1338ed02cdb5f6d5381",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "~5.8.0|^6.0.0",
+                "illuminate/filesystem": "~5.8.0|^6.0.0",
+                "illuminate/support": "~5.8.0|^6.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BearSync\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Caleb Porzio",
+                    "email": "calebporzio@gmail.com"
+                }
+            ],
+            "description": "Access your Bear notes in Laravel",
+            "time": "2020-01-08T14:43:51+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
