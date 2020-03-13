@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3f5c37196c9a9f034fc7b2c866fba68a",
+    "content-hash": "5fc31d57e379b5ef2c25c6ddb762e0aa",
     "packages": [
         {
             "name": "calebporzio/bear-sync",
@@ -5631,6 +5631,69 @@
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
             "time": "2019-06-13T22:48:21+00:00"
+        },
+        {
+            "name": "tiagomichaelsousa/laravelresources",
+            "version": "v1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tiagomichaelsousa/LaravelResources.git",
+                "reference": "9c8f16c8724c8a4db0bb99876fca8519f3b68407"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tiagomichaelsousa/LaravelResources/zipball/9c8f16c8724c8a4db0bb99876fca8519f3b68407",
+                "reference": "9c8f16c8724c8a4db0bb99876fca8519f3b68407",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5|~6"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.1",
+                "orchestra/testbench": "~3|~4",
+                "phpunit/phpunit": "^8.0",
+                "sempro/phpunit-pretty-print": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "tiagomichaelsousa\\LaravelResources\\LaravelResourcesServiceProvider"
+                    ],
+                    "aliases": {
+                        "LaravelResources": "tiagomichaelsousa\\LaravelResources\\Facades\\LaravelResources"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Helpers/helpers.php"
+                ],
+                "psr-4": {
+                    "tiagomichaelsousa\\LaravelResources\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "tiagomichaelsousa",
+                    "email": "tiagomichaelsousa@gmail.com",
+                    "homepage": "https://github.com/tiagomichaelsousa",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel Resources is a speed-up development package that allows you to create a boilerplate for Laravel apps with a default API structure.",
+            "homepage": "https://github.com/tiagomichaelsousa/laravelresources",
+            "keywords": [
+                "LaravelResources",
+                "laravel",
+                "laravel-resources"
+            ],
+            "time": "2020-01-30T18:11:37+00:00"
         },
         {
             "name": "webmozart/assert",
