@@ -15,4 +15,5 @@ Route::get('/', 'HomeController@index')->name('home.index');
 Route::get('contact', 'ContactController@create')->name('contact.create');
 Route::post('contact/submit', 'ContactController@submit')->name('contact.submit');
 
+Route::resource('users', 'UserController');
 Route::resource('posts', 'PostController');
